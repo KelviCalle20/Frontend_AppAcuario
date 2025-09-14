@@ -1,19 +1,32 @@
-import React from 'react'
+import React, {useState}from 'react'
+import { Link } from 'react-router-dom';
+import axios from "axios";
 import "./Login.css";
 import {FaUser} from "react-icons/fa";
 import {FaLock} from "react-icons/fa";
 const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const handleSubmit = async (e) => {
+    e.preventSefault();
+    try{
+        const res = await axios.post('http://localhost:4000/api/users/login', { email, password });
+        alert(res.data.message);
+    } catch (err){
+        alert(err.response?.data?.error || 'error en el login');
+    }
+  };
   return (
     <div className='wrapper'>
-        <form action="">
+        <form onSubmit={handleSubmit}>
             <h1>Login</h1>
             <div className='input-box'>
-                <input type="email" placeholder='Correo electronico' required/>
+                <input type="email" placeholder='Correo electronico' required value={email} onChange={(e) => setEmail(e.target.value)}/>
                 <FaUser className='icon'/>
             </div>
 
             <div className='input-box'>
-                <input type="password" placeholder='Password' required/>
+                <input type="password" placeholder='Password' required value={password} onChange={(e) => setPassword(e.target.value)}/>
                 <FaLock className='icon'/>
             </div>
 
@@ -22,7 +35,7 @@ const Login = () => {
             </div>
             <button type='submit'>Iniciar Sesion</button>
             <div className='register-link'>
-                <a href="#"> registrarse</a>
+                <Link to="/register">registrarse</Link>
             </div>
         </form>
     </div>
