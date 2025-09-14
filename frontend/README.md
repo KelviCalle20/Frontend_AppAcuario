@@ -1,12 +1,32 @@
-# React + Vite
+# AppAcuario_Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔹 Frontend (React + Vite + Tailwind)
 
-Currently, two official plugins are available:
+El frontend es la interfaz web donde interactúa el usuario. Consume los datos de la API.
+![frontend](https://github.com/user-attachments/assets/cdf03b57-5656-4d05-8af3-6d470c53900c)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📦 Librerías Frontend
+     react-router-dom → navegación entre páginas.
+     axios → comunicación con el backend.
+     react-hook-form → validación de formularios.
+     react-icons → íconos decorativos.
+     tailwindcss o bootstrap → estilos responsivos.
+     context API o zustand → manejo de estado global.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+⚙️ Funcionalidades Frontend
+      Registro e inicio de sesión.
+      Catálogo de productos con búsqueda y filtros.
+      Carrito de compras.
+      Checkout (pedido).
+      Sección de artículos educativos.
+      Panel de administración (productos, pedidos, artículos).
+
+📌 Resumen rápido:
+
+  Backend = lógica, datos y API REST.
+
+  Frontend = interfaz web y experiencia de usuario.
+
+
+
